@@ -1,0 +1,108 @@
+/* src/ProgressSteps.css */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.progress {
+  background-color: #e0e0e0;
+  height: 4px;
+  width: 350px;
+  max-width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.progress-bar {
+  background-color: #3498db;
+  height: 100%;
+  width: 0%;
+  transition: 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.circles {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  max-width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 3;
+  transform: translateY(-34px);
+}
+
+.circle {
+  background-color: white;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #e0e0e0;
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 30px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.btn:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.btn:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* Thêm các styles này vào cuối file ProgressSteps.css */
+
+/* Điều chỉnh cho chế độ tối */
+.dark-theme .progress {
+  background-color: #555;
+}
+
+.dark-theme .circle {
+  background-color: #333;
+  border-color: #555;
+  color: #ccc;
+}
+
+.dark-theme .circle.active {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.dark-theme .btn:disabled {
+  background-color: #444;
+  color: #888;
+}
