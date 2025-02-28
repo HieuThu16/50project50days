@@ -2,6 +2,8 @@
 import { useState } from "react";
 import "./ProgressSteps.css";
 
+
+
 const ProgressSteps = ({ totalSteps = 4 }) => {
   const [currentStep, setCurrentStep] = useState(1);
 
